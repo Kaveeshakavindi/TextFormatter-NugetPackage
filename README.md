@@ -29,3 +29,7 @@ To use the `TextFormatter` class, call the `FormatText` method and provide the t
 ### Syntax:
 ```csharp
 string formattedText = TextFormatter.Class1.FormatText(string text, string caseType);
+
+### Doc
+https://learn.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli
+https://learn.microsoft.com/en-us/nuget/reference/nuspec#copyright
