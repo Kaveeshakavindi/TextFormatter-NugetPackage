@@ -1,35 +1,38 @@
-﻿# TextFormatter
+# Text Case Converter  
 
-`TextFormatter` is a simple C# utility package that provides various methods for formatting text into different case styles. This package can be useful in scenarios where you need to convert text into a specific format for display, storage, or processing.
+**Text Case Converter** is a lightweight C# library for transforming text into different casing formats.  
+**sources :**
+https://learn.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli
+https://learn.microsoft.com/en-us/nuget/reference/nuspec#copyright
 
-## Features
+## Features  
+- Convert text to **Sentence Case**, **Title Case**, **Uppercase**, **Lowercase**, and **Capitalized Case**  
+- Support for **Camel Case**, **Pascal Case**, **Snake Case**, **Kebab Case**, and **Alternating Case**  
+- Simple and easy-to-use API  
 
-- Supports multiple case formatting styles:
-  - Sentence case
-  - Title case
-  - Uppercase
-  - Lowercase
-  - Capitalized case
-  - Camel case
-  - Pascal case
-  - Snake case
-  - Kebab case
-  - Alternating case
-- Provides a flexible method for transforming text to any of the above styles.
-- Includes validation to ensure input text is not null or empty.
+## Installation  
+You can install this package via NuGet:  
 
-## Installation
-
-There is no specific installation required for this package. Simply include the `TextFormatter` class in your C# project, and you can start using the `FormatText` method directly.
+```sh
+dotnet add package TextCaseConverter
 
 ## Usage
-
 To use the `TextFormatter` class, call the `FormatText` method and provide the text you want to format, along with the desired `caseType` parameter.
 
 ### Syntax:
 ```csharp
-string formattedText = TextFormatter.Class1.FormatText(string text, string caseType);
+using TextCaseConverter;
 
-### Doc
-https://learn.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli
-https://learn.microsoft.com/en-us/nuget/reference/nuspec#copyright
+string text = "hello world";
+
+// Different case conversions
+string sentenceCase  = TextCaseConverter.ConvertText.TextCase(text, "sentence");   // "Hello world"
+string titleCase     = TextCaseConverter.ConvertText.TextCase(text, "title");      // "Hello World"
+string upperCase     = TextCaseConverter.ConvertText.TextCase(text, "uppercase");  // "HELLO WORLD"
+string lowerCase     = TextCaseConverter.ConvertText.TextCase(text, "lowercase");  // "hello world"
+string capitalized   = TextCaseConverter.ConvertText.TextCase(text, "capitalized");// "Hello World"
+string camelCase     = TextCaseConverter.ConvertText.TextCase(text, "camel");      // "helloWorld"
+string pascalCase    = TextCaseConverter.ConvertText.TextCase(text, "pascal");     // "HelloWorld"
+string snakeCase     = TextCaseConverter.ConvertText.TextCase(text, "snake");      // "hello_world"
+string kebabCase     = TextCaseConverter.ConvertText.TextCase(text, "kebab");      // "hello-world"
+string alternating   = TextCaseConverter.ConvertText.TextCase(text, "alternating");// "hElLo wOrLd"
